@@ -45,18 +45,4 @@
 
 La fase donde más sufre es: **F4 · Imprevisto en ruta** porque cuando el bus falla (se descompone, no llega, va demasiado lleno), Marco pierde todo control sobre su tiempo. No tiene plan B accesible: Uber cuesta 5 veces más, caminar no es opción por la distancia, y depende de pick-ups informales que son inseguros y no garantizados. Todo su esfuerzo previo (madrugar, salir temprano, aprenderse horarios) se desmorona en un instante por algo completamente fuera de su control.
 
----
 
-## → Escribe tu problema (una sola oración)
-
-Elige **un** formato y ánclalo al valle de arriba:
-
-**POV:** *Marco, un trabajador que depende del bus urbano diariamente, necesita poder reaccionar rápido cuando su transporte falla porque hoy no tiene información ni alternativas accesibles, y termina perdiendo dinero (descuentos) y dignidad (llegar mojado, tarde, estresado) por un sistema impredecible.*
-
-> Marco necesita poder anticipar o reaccionar ante las fallas del transporte público porque hoy no tiene información en tiempo real ni alternativas económicamente viables, y cada imprevisto le cuesta dinero, tiempo y bienestar.
-
-**HMW:** *¿Cómo podríamos reducir la incertidumbre del transporte público para trabajadores como Marco de modo que un bus descompuesto o atrasado no les arruine el día laboral?*
-
-> ¿Cómo podríamos darle a Marco visibilidad sobre el estado real del transporte de modo que pueda tomar decisiones informadas antes de quedarse varado?
-
-**Test del problema (marca):**  [x] tiene usuario  · [x] tiene dolor con evidencia  · [x] **NO** contiene la solución
