@@ -1,17 +1,14 @@
-# marcador
+# Marcador
 
-A new Flutter project.
+## Capturas
+![alt text](image.png)
+### Captura 1
+![
+](image-1.png)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+ ¿Qué hace setState cuando presiona un botón y qué ocurriría si cambia los
+puntos sin llamarlo?
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Pues le dice a flutter que el widget cambio y tiene que redibujar, si no se hace internamente se cambio el valor pero no lo va a redibujar y por ende no se actualiza en la vista.
