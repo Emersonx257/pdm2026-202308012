@@ -27,15 +27,30 @@ class MyHomePage extends StatefulWidget {
 }
 
 class ProductoPedido extends StatefulWidget {
+  static double total = 0;
   const ProductoPedido({
     super.key,
     required this.title,
     required this.producto,
     required this.cantidad,
+    required this.precio,
   });
   final String title;
   final String producto;
   final int cantidad;
+  final double precio;
+
+  void sumarCantidad(int cantidad) {
+    this.cantidad + 1;
+    total = precio * this.cantidad;
+  }
+
+  void restarCantidad(int cantidad) {
+    if (this.cantidad > 0) {
+      this.cantidad - 1;
+      total = precio * this.cantidad;
+    }
+  }
 
   @override
   State<ProductoPedido> createState() => _ProductoPedidoState();
