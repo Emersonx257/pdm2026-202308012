@@ -27,45 +27,54 @@ class MyHomePage extends StatefulWidget {
 }
 
 class ProductoPedido extends StatefulWidget {
-  static double total = 0;
   const ProductoPedido({
     super.key,
-    required this.title,
     required this.producto,
-    required this.cantidad,
+    this.cantidad = 0,
     required this.precio,
+    this.onCambio,
   });
-  final String title;
   final String producto;
   final int cantidad;
   final double precio;
-
-  void sumarCantidad(int cantidad) {
-    this.cantidad + 1;
-    total = precio * this.cantidad;
-  }
-
-  void restarCantidad(int cantidad) {
-    if (this.cantidad > 0) {
-      this.cantidad - 1;
-      total = precio * this.cantidad;
-    }
-  }
+  final void Function(int cantidad, double subtotal)? onCambio;
 
   @override
   State<ProductoPedido> createState() => _ProductoPedidoState();
 }
 
 class _ProductoPedidoState extends State<ProductoPedido> {
+  late int _cantidad;
+  @override
+  void initState() {
+    super.initState();
+    _cantidad = widget.cantidad;
+  }
+
+  double get subtotal => _cantidad * widget.precio;
+
+  void Sumar() {
+    setState(() {
+      _cantidad++;
+    });
+    widget.onCambio?.call(_cantidad, subtotal);
+  }
+
+  void Restar() {
+    setState(() {
+      if (_cantidad > 0) {
+        _cantidad--;
+      }
+    });
+    widget.onCambio?.call(_cantidad, subtotal);
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text(widget.title)),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[const Text('Producto Pedido')],
-        ),
+    return ListTile(
+      title: Text(widget.producto),
+      subtitle: Text(
+        'Cantidad: $_cantidad, Subtotal: \$${subtotal.toStringAsFixed(2)}',
       ),
     );
   }
